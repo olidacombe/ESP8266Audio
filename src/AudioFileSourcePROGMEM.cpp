@@ -36,10 +36,10 @@ bool AudioFileSourcePROGMEM::open(const void *data, uint32_t len)
   if (!data || !len)
     return false;
 
-  opened = true;
   progmemData = data;
   progmemLen = len;
   filePointer = 0;
+  opened = true;
   return true;
 }
 
@@ -47,8 +47,8 @@ bool AudioFileSourcePROGMEM::open()
 {
   if (progmemData == nullptr)
     return false;
-  opened = true;
   filePointer = 0;
+  opened = true;
   return true;
 }
 
